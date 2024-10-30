@@ -9,7 +9,7 @@
  * const message = generateMessage("Jack", 25); // "Hey Jack, happy 25 birthday!"
  */
 function generateMessage(name, age) {
-
+return `Hey ${name}, happy ${age} birthday`;
 }
 
 /**
@@ -22,7 +22,7 @@ function generateMessage(name, age) {
  * const title = titleCase("hello world"); // title will be "Hello World"
  */
 function titleCase(sentence) {
-
+return sentence.split(' ').map(word=>word.charAt(0).toUpperCase()+ word.slice(1)).join(' ');
 }
 
 /**
@@ -37,8 +37,14 @@ function titleCase(sentence) {
  */
 function sumOfRange(start, end) {
 
-}
+    let sum = 0
+    for (let i = start; i <= end; i++){
+        sum += i;
+    }
+        return sum;
 
+}
+//Hjælp fra tidligere opgaver
 
 /**
  * This function generates an acronym from the first letter of each word in a sentence, ignoring words with numbers.
@@ -51,9 +57,13 @@ function sumOfRange(start, end) {
  * const anotherAcronym = generateAcronym("Federal Bureau Investigation"); // anotherAcronym will be "FBI"
  */
 function generateAcronym(sentence) {
-
+return sentence
+    .split(' ')
+    .filter(word => /[a-zA-Z]+$/.test(word))
+    .map(word => word[0].toUpperCase())
+    .join ('');
 }
-
+// Stor Hjælp fra freecodecamp,Sentry,stackoverFlow
 
 /**
  * This function counts consonants in a string, with lowercase counting as 1 and uppercase as 2.
@@ -66,5 +76,15 @@ function generateAcronym(sentence) {
  * const anotherCount = countConsonantsWeighted("JavaScript"); // anotherCount will be 9
  */
 function countConsonantsWeighted(str) {
+const vowels =`AIEUOaieuo`;
+let total = 0;
+for (let i = 0; i < str.length; i++){
+    const char = str[i];
+    if (/[a-zA-Z]/.test(char) && !vowels.includes(char)){
+        total += i + 1;
+    }
+}
+        return total;
 
 }
+// stor hjælp fra freecodecamp. W3 schools. og tidligere opgaver.

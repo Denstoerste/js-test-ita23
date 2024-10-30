@@ -8,7 +8,7 @@
  * console.log(coolestTeacher); // Benjamin
  */
 function getCoolestTeacher() {
-    
+    return "Benjamin";
 }
 
 /**
@@ -24,6 +24,7 @@ function getCoolestTeacher() {
  * const anotherResult = multiplyAndAdd(-1, 1, 2); // anotherResult will be 1
  */
 function multiplyAndAdd(a, b, c) {
+return a*b+c;
 
 }
 
@@ -38,7 +39,7 @@ function multiplyAndAdd(a, b, c) {
  * const anotherResult = determineType(42); // anotherResult will be "number"
  */
 function determineType(value) {
-
+return typeof value;
 }
 
 /**
@@ -52,7 +53,9 @@ function determineType(value) {
  * const result = concatenateStringsWithSpace("Hello", "World"); // result will be "Hello World"
  */
 
-function concatenateStringsWithSpace(a, b) {
+function concatenateStringsWithSpace(str1,str2) {
+
+    return`${str1} ${str2}`;
 
 }
 
@@ -71,7 +74,7 @@ function concatenateStringsWithSpace(a, b) {
  */
 
 function toUpperCaseWithSmiley(str) {
-
+    return str.toUpperCase() + ":)";
 }
 
 /**
@@ -87,5 +90,8 @@ function toUpperCaseWithSmiley(str) {
  */
 function repeatString(str, times) {
 
+    if ( times <= 0 ) return ""
+    return Array(times).fill(str).join(" ")
 }
 
+// Geeks for Geeks

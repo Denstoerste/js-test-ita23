@@ -14,9 +14,13 @@
  * console.log(numbers); // [5]
  */
 function returnNumbers(start, finish) {
-
+const result = [];
+for (let i = start; i <= finish; i++) {
+    result.push(i);
 }
-
+return result;
+}
+// hjælp fra tidligere opgaver.
 
 /**
  * This function sums up all the values in an array.
@@ -30,8 +34,10 @@ function returnNumbers(start, finish) {
  */
 
 function sumArray(array) {
-
+return array.reduce((sum,num)=> sum+num,0);
 }
+//Hjælp fra Free code Camp
+
 
 /**
  * This function adds a new element to the end of an array.
@@ -45,9 +51,10 @@ function sumArray(array) {
  * const updatedArray = pushElement(myArray, 4); // updatedArray will be [1, 2, 3, 4]
  */
 function pushElement(arr, elem) {
-
+arr.push(elem)
+    return arr;
 }
-
+// Hjælp fra tidligere opgaver om array
 
 /**
  * This function removes all instances of a specific value from an array.
@@ -61,5 +68,8 @@ function pushElement(arr, elem) {
  * const filtered = removeValue(numbers, 2); // filtered will be [1, 3, 4, 5]
  */
 function removeValue(array, valueToRemove) {
+return array.filter(element => element !== valueToRemove);
+
 
 }
+// Hjælp fra stack overflow og sentry

@@ -10,9 +10,9 @@
  */
 
 function isEven(number) {
-
+return number % 2 ===0;
 }
-
+// Hjælp gamle opgaver
 /**
  * This function checks if a number is within a range.
  *
@@ -27,9 +27,9 @@ function isEven(number) {
  */
 
 function isWithinRange(n, min, max) {
-
+    return n >= min %  n >= max;
 }
-
+//Hjælp fra freecodecamp
 /**
  * This function checks if a string contains the string "ba"
  *
@@ -43,7 +43,7 @@ function isWithinRange(n, min, max) {
  */
 
 function stringContainsBa(string) {
-
+return string.includes("ba");
 }
 
 
@@ -59,9 +59,15 @@ function stringContainsBa(string) {
  */
 function sumOfDigitsWithPosition(num) {
 
+    return num().split('').reduce((sum,digit,index) =>{
+        return sum + Math.pow(Number(digit),index+ 1);
+    }, 0);
+
+
+
 }
 
-
+//HJælp fra freecodecamp og W3 schools
 
 
 
